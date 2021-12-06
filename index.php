@@ -15,7 +15,7 @@
     <div class="menu">
         <ul>
             <li><a href="./index.php">Home</a></li>
-            <li><a href="./auswertung.php">Auswertung</a></li>
+            <li><a href="./login.html">Login</a></li>
         </ul>
     </div>
 </header>
