@@ -1,11 +1,11 @@
 <?php
 session_start();
-require_once "db/dbconnection.php";
+require_once "db/connection.ini.php";
 require_once "manager/usermanager.inc.php";
 //include('./inc/header.php');
 //include('./inc/menu.php');
 
-$usermanager = new UserManager($conn);
+$usermanager = new UserManager($connection);
 
 
 $showFormular = true; //--> soll das Registrierungsformular angezeigt werden?
