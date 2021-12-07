@@ -12,6 +12,13 @@ main {
     
 }
 
+footer{
+    text-align: center;
+    padding: 3px;
+    background-color: DarkSalmon;
+    color: white;
+}
+
 .center-wrapper {
     max-width: 1200px;
     margin: 0 auto;
