@@ -4,7 +4,7 @@ class Fragen
 {
     public int $id;
     public string $frage;
-    public id $fk_bereich_id;
+    public int $fk_bereich_id;
 
     public function __construct(int $id, string $frage, int $fk_bereich_id)
     {
