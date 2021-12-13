@@ -59,7 +59,7 @@ if(isset($_POST['btlogin'])){
         </div>
     </form>
 </main>
-
+<?php include 'inc/footer.inc.php';?>
 </body>
 </html>
 

@@ -1,5 +1,4 @@
 <?php
-// Start des Session mit wichtigsten Includes
 require_once 'inc/maininclude.inc.php';
 ?>
 <!DOCTYPE HTML>
@@ -19,10 +18,9 @@ require_once 'inc/maininclude.inc.php';
 <!-- Inhalt der Seite -->
 <main class="center-wrapper">
     <h1>Herzlich willkommen zur Kompetenz Regenbogen.</h1>
-    <p>Ihre Kompetenzrrhebung - digital und persönlich!</p>
+    <p>Ihre Kompetenzerhebung - digital und persönlich!</p>
 </main>
-
-</body>
 <?php
 include('./inc/footer.inc.php');
 ?>
+</body>
