@@ -1,12 +1,16 @@
 <?php
-// Start des Session mit wichtigsten Includes
 require_once 'inc/maininclude.inc.php';
+
+if(isset($_POST['btlogout'])){
+    $userManager->logout();
+    header('Location: ./');
+}
 ?>
 <!DOCTYPE HTML>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Kompetenz Regenbogen</title>
+    <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="js/jquery-3.6.0.js" defer></script>
     <script src="js/script.js" defer></script>
@@ -18,11 +22,11 @@ require_once 'inc/maininclude.inc.php';
 
 <!-- Inhalt der Seite -->
 <main class="center-wrapper">
-    <h1>Herzlich willkommen zur Kompetenz Regenbogen.</h1>
-    <p>Ihre Kompetenzrrhebung - digital und persönlich!</p>
+    <h1>Logout</h1>
+    <form action="logout.php" method="POST">
+        <button name="btlogout">Abmelden</button>
+    </form>
 </main>
 
 </body>
-<?php
-include('./inc/footer.inc.php');
-?>
+</html>

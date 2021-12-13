@@ -1,6 +1,6 @@
 <?php
 
-class Fragen
+class Frage
 {
     public int $id;
     public string $frage;

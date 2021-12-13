@@ -8,5 +8,5 @@ if(!isset($_SESSION['userid'])) {
 $userid = $_SESSION['userid'];
 
 echo "Hallo User: ".$userid;
-?>
+
 

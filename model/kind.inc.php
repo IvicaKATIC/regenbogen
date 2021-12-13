@@ -1,6 +1,5 @@
 <?php
 
-use Cassandra\Date;
 
 class Kind
 {
@@ -8,14 +7,14 @@ class Kind
     public string $vorname;
     public string $nachname;
     public int $geschlecht;
-    public Date $geburtsdatum;
-    public Date $eintrittsdatum;
+    public datetime $geburtsdatum;
+    public datetime $eintrittsdatum;
     public int $geschwister;
     public int $fk_erziehungsberechtigte_id;
     public int $fk_paedagogen_id;
 
-    public function __construct(int $id, string $vorname,string $nachname, int $geschlecht, Date $geburtsdatum,
-                                Date $eintrittsdatum, int $geschwister, int $fk_erziehungsberechtigte_id, int $fk_paedagogen_id)
+    public function __construct(int $id, string $vorname,string $nachname, int $geschlecht, datetime $geburtsdatum,
+                                datetime $eintrittsdatum, int $geschwister, int $fk_erziehungsberechtigte_id, int $fk_paedagogen_id)
     {
         $this->id = $id;
         $this->vorname =$vorname;
