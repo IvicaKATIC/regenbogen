@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../model/paedagoge.inc';
+require_once __DIR__ . '/../model/paedagoge.inc.php';
 class PaedagogeManager {
     // PDO $connection ist die Verbindung zur Datenbank
     private PDO $connection;
