@@ -26,3 +26,4 @@ require_once 'inc/maininclude.inc.php';
 <?php
 include('./inc/footer.inc.php');
 ?>
+</html>
