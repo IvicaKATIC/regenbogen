@@ -27,6 +27,8 @@ if(isset($_POST['btlogout'])){
         <button name="btlogout">Abmelden</button>
     </form>
 </main>
-
+<?php
+include('./inc/footer.inc.php');
+?>
 </body>
 </html>
