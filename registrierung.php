@@ -59,7 +59,7 @@ if ($showFormular) {
                 <label for="Passwort">Passwort:</label>
                 <input type="password" id="passwort" name="passwort" required>
                 <label for="Passwort2">Passwort widerholen:</label>
-                <input type="password" id="passwort2" name="passwort2" required>
+                <input type="passwort2" id="passwort2" name="passwort2" required>
                 <button name="btregister">Registrieren!</button>
             </form>
         </section>

@@ -1,7 +1,8 @@
 * {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body{
+
+body {
 
     background-image: url("../images/mainlogo.jpg");
     background-repeat: no-repeat;
@@ -9,16 +10,16 @@ body{
 }
 
 main {
-    
+    height: 100vh;
 }
 
-.footer{
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color: silver;
-    color: white;
+    color: darkolivegreen;
     text-align: center;
 }
 
@@ -39,7 +40,7 @@ main {
 
 .menu ul {
     list-style-type: none;
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 
