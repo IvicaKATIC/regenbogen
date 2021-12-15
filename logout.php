@@ -2,7 +2,7 @@
 require_once 'inc/maininclude.inc.php';
 
 if(isset($_POST['btlogout'])){
-    $userManager->logout();
+    $paedagogeManager->logout();
     header('Location: ./');
 }
 ?>

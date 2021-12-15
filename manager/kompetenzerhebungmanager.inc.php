@@ -11,16 +11,16 @@ class KompetenzerhebungManager
         $this->connection = $connection;
     }
 
-    function createTermin(DateTime $termin, User $user, Immobilie $immo): bool
+    function createKompetenzerhebung(int $id, date $datum, int $fk_kind_id): bool
     {
-        $ps = $this->conn->prepare('
-            INSERT INTO besichtigung 
-            (user_id, immobilien_id, termin) 
+        $ps = $this->connection->prepare('
+            INSERT INTO t_kompetenzerhebung 
+            (id, datum, fk_kind_id) 
             VALUES 
-            (:userId, :immobilienId, :termin) ');
-        $ps->bindValue('userId', $user->id);
-        $ps->bindValue('immobilienId', $immo->id);
-        $ps->bindValue('termin', $termin->format('Y-m-d H:i:s'));
+            (:id, :datum, :fk_kind_id) ');
+        $ps->bindValue('id', $id->id);
+        $ps->bindValue('datum', $datum->format('Y-m-d H:i:s'));
+        $ps->bindValue('fk-kind_id', $fk_kind_id->fk_kind_id);
         return $ps->execute();
     }
 }

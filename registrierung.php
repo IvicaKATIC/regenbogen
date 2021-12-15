@@ -4,7 +4,7 @@ require_once "db/connection.inc.php";
 require_once "manager/paedagogemanager.inc.php";
 
 
-$paedagogemanager = new PaedagogeManager($connection);
+$paedagogeManager = new PaedagogeManager($connection);
 
 
 $showFormular = true; // die Registrierung soll angezeigt werden
@@ -29,14 +29,16 @@ if (isset($_POST['btregister'])) {
     }
 
     // todo
-    //if ($admin == )
+    $admin = false;
+    //if ($isadmin == true){
+    //  $isadmin = (SET ? 1 : 0); }
 
     //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
     if (count($errors) == 0) {
-        if ($paedagogemanager->getPaedagogeByEmail($email) != false) {
+        if ($paedagogeManager->getPaedagogeByEmail($email) != false) {
             $errors[] = 'Paedagoge bereits registriert!';
         } else {
-            $id = $paedagogemanager->registerPaedagoge($email, $passwort, $admin, $vorname, $nachname);
+            $id = $paedagogeManager->registerPaedagoge($email, $passwort, $admin, $vorname, $nachname);
             header('Location: ./login.php');
             return;
         }
@@ -56,25 +58,26 @@ if ($showFormular) {
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+<?php include 'inc/header.inc.php'; ?>
 <form action="?register=1" method="post">
     <section>
         <h2>Registrierung</h2>
         <form action="." method="POST">
             <?php include 'inc/errormessages.inc.php'; ?>
             <input type="hidden" name="action" value="insert">
-            <label for="Email">Email:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required><br><br>
-            <label for="Passwort">Passwort:</label>
+            <label for="passwort">Passwort:</label>
             <input type="password" id="passwort" name="passwort" required><br><br>
-            <label for="Passwort2">Passwort widerholen:</label>
+            <label for="passwort2">Passwort widerholen:</label>
             <input type="password" id="passwort2" name="passwort2" required><br><br>
-            <label for="Admin">Ist Admin</label>
+            <label for="admin">Ist Admin</label>
             <input type="radio" id="admin" name="admin" value="isadmin"><br><br>
-            <label for="Admin">Ist nicht Admin</label>
+            <label for="admin">Ist nicht Admin</label>
             <input type="radio" id="admin" name="admin" value="isnotadmin"><br><br>
-            <label for="Vorname">Vorname:</label>
+            <label for="vorname">Vorname:</label>
             <input type="text" id="vorname" name="vorname" required><br><br>
-            <label for="Nachname">Nachname:</label>
+            <label for="nachname">Nachname:</label>
             <input type="text" id="nachname" name="nachname" required><br><br>
             <button name="btregister">Registrieren!</button>
         </form>

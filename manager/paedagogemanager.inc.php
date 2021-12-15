@@ -7,10 +7,10 @@ class PaedagogeManager {
         $this->connection = $connection;
     }
 
-    function createPaedagoge(string $email, string $passwort, bool $admin, string $vorname, string $nachname){
+    function registerPaedagoge(string $email, string $passwort, bool $admin, string $vorname, string $nachname){
         // Passwort hashen
         $passwort = password_hash($passwort, PASSWORD_DEFAULT);
-        // neuangelegte paedagogen sind kein administratoren
+        // neuangelegte paedagoge ist kein administrator
         $admin = 0;
 
         // Gibt es schon einen Paedagogen mit dieser E-Mail Adresse?
@@ -21,8 +21,8 @@ class PaedagogeManager {
 
         // User in DB einfügen
         $ps = $this->connection->prepare('
-            INSERT INTO paedagoge
-            (email, passwort, admin, vorname, nachname) 
+            INSERT INTO t_paedagoge
+            (Email, Passwort, Admin, Vorname, Nachname) 
             VALUES 
             (:email, :passwort, :admin, :vorname, :nachname) ');
         // Named parameter werden durch Werte ersetzt
@@ -62,8 +62,8 @@ class PaedagogeManager {
     function getPaedagogeByEmail($email) : Paedagoge|bool {
         $ps = $this->connection->prepare('
             SELECT * 
-            FROM paedagoge 
-            WHERE email = :email');
+            FROM t_paedagoge 
+            WHERE Email = :email');
 
         $ps->bindValue('email', $email);
         // Statement an die Datenbank senden
@@ -71,8 +71,8 @@ class PaedagogeManager {
         // wenn ein Eintrag gefunden wurde
         if($row = $ps->fetch()){
             // Paedagoge gefunden --> zurückgeben
-            return new Paedagoge($row['id'], $row['email'],
-                $row['passwort'], $row['admin'], $row['vorname'], $row['nachname']);
+            return new Paedagoge($row['ID'], $row['Email'],
+                $row['Passwort'], $row['Admin'], $row['Vorname'], $row['Nachname']);
         }
         // Paedagoge nicht gefunden --> false zurückgeben
         return false;
@@ -109,8 +109,8 @@ class PaedagogeManager {
     function getPaedagogeById(int $id) :  Paedagoge|bool{
         $ps = $this->connection->prepare('
             SELECT * 
-            FROM paedagoge 
-            WHERE id = :id');
+            FROM t_paedagoge 
+            WHERE ID = :id');
         // Named Parameter mit dem Wert ersetzen
         $ps->bindValue('id', $id);
         // Statement an die Datenbank senden

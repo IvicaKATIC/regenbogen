@@ -8,5 +8,8 @@ require_once __DIR__ . '/../db/connection.inc.php';
 require_once __DIR__ . '/../manager/paedagogemanager.inc.php';
 
 
-// Objekt der Klasse UserManager erzeugen
+// Objekt der Klasse PaedagogeManager erzeugen
 $paedagogeManager = new PaedagogeManager($connection);
+
+//errormessages Array
+$errors =[];

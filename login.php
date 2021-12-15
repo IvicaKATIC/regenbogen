@@ -12,12 +12,12 @@ if(isset($_POST['btlogin'])){
         $errors['password'] = 'Passwort eingeben.';
     }
 
-    // Wenn es keine Fehler gibt --> Registrierung durchführen
+    // Wenn es keine Fehler gibt → Registrierung durchführen
     if(count($errors) == 0){
         // Login durchführen
-        $user = $userManager->login($_POST['email'], $_POST['password']);
+        $paedagoge = $paedagogeManager->login($_POST['email'], $_POST['password']);
         // war Login erfolgreich?
-        if($user !== false){
+        if($paedagoge !== false){
             // Redirect zum Index
             header("Location: ./?loggedin=true");
         } else {
