@@ -19,7 +19,7 @@ class KompetenzerhebungManager
             VALUES 
             (:id, :datum, :fk_kind_id) ');
         $ps->bindValue('id', $id->id);
-        $ps->bindValue('datum', $datum->format('Y-m-d H:i:s'));
+        $ps->bindValue('datum', $datum->format('d.m.Y'));
         $ps->bindValue('fk-kind_id', $fk_kind_id->fk_kind_id);
         return $ps->execute();
     }

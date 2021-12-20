@@ -3,12 +3,12 @@ session_start();
 require_once "db/connection.inc.php";
 require_once "manager/paedagogemanager.inc.php";
 
-
 $paedagogeManager = new PaedagogeManager($connection);
 
-
 $showFormular = true; // die Registrierung soll angezeigt werden
+
 $errors = [];
+
 if (isset($_POST['btregister'])) {
     $email = $_POST['email'];
     $passwort = $_POST['passwort'];
@@ -36,7 +36,7 @@ if (isset($_POST['btregister'])) {
     //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
     if (count($errors) == 0) {
         if ($paedagogeManager->getPaedagogeByEmail($email) != false) {
-            $errors[] = 'Paedagoge bereits registriert!';
+            $errors[] = 'Pädagoge bereits registriert!';
         } else {
             $id = $paedagogeManager->registerPaedagoge($email, $passwort, $admin, $vorname, $nachname);
             header('Location: ./login.php');
@@ -61,7 +61,7 @@ if ($showFormular) {
 <?php include 'inc/header.inc.php'; ?>
 <form action="?register=1" method="post">
     <section>
-        <h2>Registrierung</h2>
+        <h2>Mitarbeiter Registrierung</h2>
         <form action="." method="POST">
             <?php include 'inc/errormessages.inc.php'; ?>
             <input type="hidden" name="action" value="insert">

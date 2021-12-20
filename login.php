@@ -1,23 +1,22 @@
 <?php
-
 require_once 'inc/maininclude.inc.php';
 
 // "btregister" senden, somit auch den Formular
-if(isset($_POST['btlogin'])){
+if (isset($_POST['btlogin'])) {
     // Eingabefelder überprüfen
-    if(strlen(trim($_POST['email'])) == 0){
+    if (strlen(trim($_POST['email'])) == 0) {
         $errors['email'] = 'Email eingeben.';
     }
-    if(strlen(trim($_POST['password'])) == 0){
+    if (strlen(trim($_POST['password'])) == 0) {
         $errors['password'] = 'Passwort eingeben.';
     }
 
     // Wenn es keine Fehler gibt → Registrierung durchführen
-    if(count($errors) == 0){
+    if (count($errors) == 0) {
         // Login durchführen
         $paedagoge = $paedagogeManager->login($_POST['email'], $_POST['password']);
         // war Login erfolgreich?
-        if($paedagoge !== false){
+        if ($paedagoge !== false) {
             // Redirect zum Index
             header("Location: ./?loggedin=true");
         } else {
@@ -30,12 +29,12 @@ if(isset($_POST['btlogin'])){
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Kompetenz Regenbogen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="js/jquery-3.6.0.js" defer></script>
     <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 <!-- HEADER mit Menü -->
@@ -59,7 +58,7 @@ if(isset($_POST['btlogin'])){
         </div>
     </form>
 </main>
-<?php include 'inc/footer.inc.php';?>
+<?php include 'inc/footer.inc.php'; ?>
 </body>
 
 
