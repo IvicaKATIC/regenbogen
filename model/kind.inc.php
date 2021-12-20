@@ -6,14 +6,14 @@ class Kind
     public int $id;
     public string $vorname;
     public string $nachname;
-    public string $geschlecht;
+    public bool $geschlecht;
     public datetime $geburtsdatum;
     public datetime $eintrittsdatum;
     public int $geschwister;
     public int $fk_erziehungsberechtigte_id;
     public int $fk_paedagoge_id;
 
-    public function __construct(int $id, string $vorname,string $nachname, string $geschlecht, datetime $geburtsdatum,
+    public function __construct(int $id, string $vorname,string $nachname, bool $geschlecht, datetime $geburtsdatum,
                                 datetime $eintrittsdatum, int $geschwister, int $fk_erziehungsberechtigte_id, int $fk_paedagoge_id)
     {
         $this->id = $id;

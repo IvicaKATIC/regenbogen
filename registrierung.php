@@ -18,6 +18,7 @@ if (isset($_POST['btregister'])) {
     $nachname = $_POST['nachname'];
 
 
+
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = 'Bitte eine gültige E-Mail-Adresse eingeben';
     }
@@ -28,17 +29,18 @@ if (isset($_POST['btregister'])) {
         $errors[] = 'Die Passwörter müssen übereinstimmen';
     }
 
-    // todo
-    $admin = false;
-    //if ($isadmin == true){
-    //  $isadmin = (SET ? 1 : 0); }
+
+    $isadmin = false;
+    if ($admin == 'isadmin'){
+      $isadmin = true;
+    }
 
     //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
     if (count($errors) == 0) {
         if ($paedagogeManager->getPaedagogeByEmail($email) != false) {
             $errors[] = 'Pädagoge bereits registriert!';
         } else {
-            $id = $paedagogeManager->registerPaedagoge($email, $passwort, $admin, $vorname, $nachname);
+            $id = $paedagogeManager->registerPaedagoge($email, $passwort, $isadmin, $vorname, $nachname);
             header('Location: ./login.php');
             return;
         }

@@ -10,8 +10,7 @@ class PaedagogeManager {
     function registerPaedagoge(string $email, string $passwort, bool $admin, string $vorname, string $nachname){
         // Passwort hashen
         $passwort = password_hash($passwort, PASSWORD_DEFAULT);
-        // neuangelegte paedagoge ist kein administrator
-        $admin = 0;
+
 
         // Gibt es schon einen Paedagogen mit dieser E-Mail Adresse?
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -28,7 +27,7 @@ class PaedagogeManager {
         // Named parameter werden durch Werte ersetzt
         $ps->bindValue('email', $email);
         $ps->bindValue('passwort', $passwort);
-        $ps->bindValue('admin', $admin);
+        $ps->bindValue('admin', $admin ? 1 : 0);
         $ps->bindValue('vorname', $vorname);
         $ps->bindValue('nachname', $nachname);
         // preparedstatement an die DB
