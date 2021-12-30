@@ -18,7 +18,7 @@ if(isset($_POST['btlogout'])){
 </head>
 <body>
 <!-- HEADER mit Menü -->
-<?php include 'inc/header.inc.php'; ?>
+<?php include 'inc/logoutheader.inc.php'; ?>
 
 <!-- Inhalt der Seite -->
 <main class="center-wrapper">

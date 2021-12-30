@@ -36,9 +36,9 @@ class PaedagogeManager {
         return $this->connection->lastInsertId();
     }
 
-    // wenn erfolgreich, Paedagogen-Objekt zurück, sonst false
+    // wenn erfolgreich Paedagoge-Objekt zurück, sonst false
     function login(string $email, string $password) : Paedagoge|bool{
-        // User anhand der E-Mail Adresse laden
+        // den Pädagogen anhand der E-Mail Adresse laden
         $paedagoge = $this->getPaedagogeByEmail($email);
         if($paedagoge == false){
             return false;

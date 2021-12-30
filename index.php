@@ -13,7 +13,7 @@ require_once 'inc/maininclude.inc.php';
 </head>
 <body>
 <!-- HEADER mit Menü -->
-<?php include 'inc/header.inc.php'; ?>
+<?php include 'inc/indexheader.inc.php'; ?>
 
 <!-- Inhalt der Seite -->
 <main class="center-wrapper">

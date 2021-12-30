@@ -18,7 +18,7 @@ if (isset($_POST['btlogin'])) {
         // war Login erfolgreich?
         if ($paedagoge !== false) {
             // Redirect zum Index
-            header("Location: ./?loggedin=true");
+            header("Location: ./paedagogeregistrierung.php");
         } else {
             $errors['login'] = 'Login fehlgeschlagen.';
         }
@@ -38,7 +38,7 @@ if (isset($_POST['btlogin'])) {
 </head>
 <body>
 <!-- HEADER mit Menü -->
-<?php include 'inc/header.inc.php'; ?>
+<?php include 'inc/loginheader.inc.php'; ?>
 
 <!-- Inhalt der Seite -->
 <main class="center-wrapper">

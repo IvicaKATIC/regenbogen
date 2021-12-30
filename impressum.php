@@ -13,7 +13,7 @@ require_once 'inc/maininclude.inc.php';
 </head>
 <body>
 <!-- HEADER mit Menü -->
-<?php include 'inc/header.inc.php'; ?>
+<?php include 'inc/indexheader.inc.php'; ?>
 <main class="center-wrapper">
     <p>Impressum</p>
     Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und

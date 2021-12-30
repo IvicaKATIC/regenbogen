@@ -41,7 +41,7 @@ if (isset($_POST['btregister'])) {
             $errors[] = 'Pädagoge bereits registriert!';
         } else {
             $id = $paedagogeManager->registerPaedagoge($email, $passwort, $isadmin, $vorname, $nachname);
-            header('Location: ./login.php');
+            header('Location: ./paedagogeregistrierung.php');
             return;
         }
     }
@@ -60,10 +60,10 @@ if ($showFormular) {
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<?php include 'inc/header.inc.php'; ?>
+<?php include 'inc/paedagogeheader.inc.php'; ?>
 <form action="?register=1" method="post">
     <section>
-        <h2>Mitarbeiter Registrierung</h2>
+        <h2>Pädagoge Registrierung</h2>
         <form action="." method="POST">
             <?php include 'inc/errormessages.inc.php'; ?>
             <input type="hidden" name="action" value="insert">

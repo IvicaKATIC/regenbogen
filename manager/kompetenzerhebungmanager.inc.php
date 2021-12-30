@@ -11,14 +11,13 @@ class KompetenzerhebungManager
         $this->connection = $connection;
     }
 
-    function createKompetenzerhebung(int $id, date $datum, int $fk_kind_id): bool
+    function createKompetenzerhebung(datetime $datum, int $fk_kind_id): bool
     {
         $ps = $this->connection->prepare('
             INSERT INTO t_kompetenzerhebung 
-            (id, datum, fk_kind_id) 
+            (Datum, FK_Kind_ID) 
             VALUES 
-            (:id, :datum, :fk_kind_id) ');
-        $ps->bindValue('id', $id->id);
+            (:datum, :fk_kind_id) ');
         $ps->bindValue('datum', $datum->format('d.m.Y'));
         $ps->bindValue('fk-kind_id', $fk_kind_id->fk_kind_id);
         return $ps->execute();

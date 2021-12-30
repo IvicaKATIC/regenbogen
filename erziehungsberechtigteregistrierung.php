@@ -28,7 +28,7 @@ if (isset($_POST['btregister'])) {
             $errors[] = 'Erzeihungsberechtigte bereits registriert!';
         } else {
             $id = $erziehungsberechtigteManager->registerErziehungsberechtigte($email,$vorname, $nachname);
-            header('Location: ./index.php');
+            header('Location: ./erziehungsberechtigteregistrierung.php');
             return;
         }
     }
@@ -58,10 +58,10 @@ if ($showFormular) {
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<?php include 'inc/header.inc.php'; ?>
+<?php include 'inc/erzihungsberechtigteheader.inc.php'; ?>
 <form action="?register=1" method="post">
     <section>
-        <h2>Erziehungsberechtigte Registrierung</h2>
+        <h2>Erziehungsberechtigte Registrieren</h2>
         <form action="." method="POST">
             <?php include 'inc/errormessages.inc.php'; ?>
             <label for="email">Email:</label>
