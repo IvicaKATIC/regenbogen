@@ -1,307 +1,132 @@
 <?php
 require_once 'inc/maininclude.inc.php';
 ?>
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <title>Kompetenz Regenbogen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="js/jquery-3.6.0.js" defer></script>
-    <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css"/>
-</head>
-<body>
+
 <!-- HEADER mit Menü -->
-<?php include 'inc/header.inc.php'; ?>
-<main class="center-wrapper">
-    <p>Impressum</p>
-    Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und
-    Offenlegungspflicht laut §25 Mediengesetz.<br>
-    <br>
-    Backend Boys Ltd<br>
-    Firmeninhanber:<br>
-    Herr Michael Schwingenschlögl<br>
-    Herr Ivica Katic<br>
-    Firmensitz:<br>
-    Sternsiedlung 2<br>EG<br>
-    8402 Werndorf<br>
-    Österreich
-    <br>
-    Tel.: +43 676 7722558<br>
-    E-Mail: ivicakatic1978@gmail.com
-    <br><br>
-    Aufsichtsbehörde/Gewerbebehörde: Bezirkshauptmannschaft Graz-Umgebung<br>
-    Berufsbezeichnung: Applikationsentwickler-Coding<br>
-    Verleihungsstaat: Österreich
-    <br><br>
-    Kontaktdaten des Verantwortlichen für Datenschutz<br>
-    Sollten Sie Fragen zum Datenschutz haben, finden Sie nachfolgend die Kontaktdaten der verantwortlichen Person bzw.
-    Stelle:
-    <br>
-    <p style="text-align: center; color: darkred; background-color: white; font-family: 'arial'; font-size: large">Herr
-        Michael Schwingenschlögl</p>
-    <br><br>
-    EU-Streitschlichtung
-    Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die
-    Online-Streitbeilegungsplattform (OS-Plattform) informieren.
-    Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europäischen Kommission
-    unter http://ec.europa.eu/odr?tid=121899691 zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in
-    unserem Impressum.
-    <br>
-    Wir möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren
-    vor einer Verbraucherschlichtungsstelle teilzunehmen.
-    <br><br>
-    Haftung für Inhalte dieser Website
-    Wir entwickeln die Inhalte dieser Website ständig weiter und bemühen uns korrekte und aktuelle Informationen
-    bereitzustellen. Leider können wir keine Haftung für die Korrektheit aller Inhalte auf dieser Website übernehmen,
-    speziell für jene, die seitens Dritter bereitgestellt wurden. Als Diensteanbieter sind wir nicht verpflichtet, die
-    von ihnen übermittelten oder gespeicherten Informationen zu überwachen oder nach Umständen zu forschen, die auf eine
-    rechtswidrige Tätigkeit hinweisen.
-    <br><br>
-    Unsere Verpflichtungen zur Entfernung von Informationen oder zur Sperrung der Nutzung von Informationen nach den
-    allgemeinen Gesetzen aufgrund von gerichtlichen oder behördlichen Anordnungen bleiben auch im Falle unserer
-    Nichtverantwortlichkeit davon unberührt.
-    <br>
-    <p style="text-align: center; color: red; font-family: 'arial'; font-size: x-large">Sollten Ihnen problematische
-        oder rechtswidrige Inhalte auffallen, bitte wir Sie uns umgehend zu kontaktieren, damit wir die rechtswidrigen
-        Inhalte entfernen können.
-        Wenn Ihnen rechtswidrige Links auf unserer Website auffallen, bitte wir Sie uns zu kontaktieren. Sie finden die
-        Kontaktdaten im Impressum.</p><br>
-    <br>
-    Haftung für Links auf dieser Website
-    Unsere Website enthält Links zu anderen Websites für deren Inhalt wir nicht verantwortlich sind. Haftung für
-    verlinkte Websites besteht für uns nicht, da wir keine Kenntnis rechtswidriger Tätigkeiten hatten und haben, uns
-    solche Rechtswidrigkeiten auch bisher nicht aufgefallen sind und wir Links sofort entfernen würden, wenn uns
-    Rechtswidrigkeiten bekannt werden.
-    <br>
-    <br>
-    Urheberrechtshinweis
-    Alle Inhalte dieser Webseite (Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht. Bitte fragen Sie uns bevor
-    Sie die Inhalte dieser Website verbreiten, vervielfältigen oder verwerten wie zum Beispiel auf anderen Websites
-    erneut veröffentlichen. Falls notwendig, werden wir die unerlaubte Nutzung von Teilen der Inhalte unserer Seite
-    rechtlich verfolgen.
-    <br>
-    Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, bitten wir Sie uns zu kontaktieren.
-    <br>
-    Bildernachweis
-    Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt.
-    <br>
-    Die Bilderrechte liegen bei den folgenden Fotografen und Unternehmen:
-    <br>
-    Alle Texte sind urheberrechtlich geschützt.
 
-    Quelle: Erstellt mit dem Impressum Generator von AdSimple
-    <br>
-    Datenschutzerklärung
-    Einleitung und Überblick
-    Wir haben diese Datenschutzerklärung (Fassung 14.12.2021-121899691) verfasst, um Ihnen gemäß der Vorgaben der
-    Datenschutz-Grundverordnung (EU) 2016/679 und anwendbaren nationalen Gesetzen zu erklären, welche personenbezogenen
-    Daten (kurz Daten) wir als Verantwortliche – und die von uns beauftragten Auftragsverarbeiter (z. B. Provider) –
-    verarbeiten, zukünftig verarbeiten werden und welche rechtmäßigen Möglichkeiten Sie haben. Die verwendeten Begriffe
-    sind geschlechtsneutral zu verstehen.
-    Kurz gesagt: Wir informieren Sie umfassend über Daten, die wir über Sie verarbeiten.
-    <br>
-    Datenschutzerklärungen klingen für gewöhnlich sehr technisch und verwenden juristische Fachbegriffe. Diese
-    Datenschutzerklärung soll Ihnen hingegen die wichtigsten Dinge so einfach und transparent wie möglich beschreiben.
-    Soweit es der Transparenz förderlich ist, werden technische Begriffe leserfreundlich erklärt, Links zu
-    weiterführenden Informationen geboten und Grafiken zum Einsatz gebracht. Wir informieren damit in klarer und
-    einfacher Sprache, dass wir im Rahmen unserer Geschäftstätigkeiten nur dann personenbezogene Daten verarbeiten, wenn
-    eine entsprechende gesetzliche Grundlage gegeben ist. Das ist sicher nicht möglich, wenn man möglichst knappe,
-    unklare und juristisch-technische Erklärungen abgibt, so wie sie im Internet oft Standard sind, wenn es um
-    Datenschutz geht. Ich hoffe, Sie finden die folgenden Erläuterungen interessant und informativ und vielleicht ist
-    die eine oder andere Information dabei, die Sie noch nicht kannten.
-    Wenn trotzdem Fragen bleiben, möchten wir Sie bitten, sich an die unten bzw. im Impressum genannte verantwortliche
-    Stelle zu wenden, den vorhandenen Links zu folgen und sich weitere Informationen auf Drittseiten anzusehen. Unsere
-    Kontaktdaten finden Sie selbstverständlich auch im Impressum.
-    <br>
-    Anwendungsbereich
-    Diese Datenschutzerklärung gilt für alle von uns im Unternehmen verarbeiteten personenbezogenen Daten und für alle
-    personenbezogenen Daten, die von uns beauftragte Firmen (Auftragsverarbeiter) verarbeiten. Mit personenbezogenen
-    Daten meinen wir Informationen im Sinne des Art. 4 Nr. 1 DSGVO wie zum Beispiel Name, E-Mail-Adresse und postalische
-    Anschrift einer Person. Die Verarbeitung personenbezogener Daten sorgt dafür, dass wir unsere Dienstleistungen und
-    Produkte anbieten und abrechnen können, sei es online oder offline. Der Anwendungsbereich dieser
-    Datenschutzerklärung umfasst:
+<section id="impressum">
 
-    alle Onlineauftritte (Websites, Onlineshops), die wir betreiben
-    Social Media Auftritte und E-Mail-Kommunikation
-    mobile Apps für Smartphones und andere Geräte
-    Kurz gesagt: Die Datenschutzerklärung gilt für alle Bereiche, in denen personenbezogene Daten im Unternehmen über
-    die genannten Kanäle strukturiert verarbeitet werden. Sollten wir außerhalb dieser Kanäle mit Ihnen in
-    Rechtsbeziehungen eintreten, werden wir Sie gegebenenfalls gesondert informieren.
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
 
-    Rechtsgrundlagen
-    In der folgenden Datenschutzerklärung geben wir Ihnen transparente Informationen zu den rechtlichen Grundsätzen und
-    Vorschriften, also den Rechtsgrundlagen der Datenschutz-Grundverordnung, die uns ermöglichen, personenbezogene Daten
-    zu verarbeiten.
-    Was das EU-Recht betrifft, beziehen wir uns auf die VERORDNUNG (EU) 2016/679 DES EUROPÄISCHEN PARLAMENTS UND DES
-    RATES vom 27. April 2016. Diese Datenschutz-Grundverordnung der EU können Sie selbstverständlich online auf EUR-Lex,
-    dem Zugang zum EU-Recht, unter https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=celex%3A32016R0679 nachlesen.
+                <h1>Impressum</h1>
 
-    Wir verarbeiten Ihre Daten nur, wenn mindestens eine der folgenden Bedingungen zutrifft:
+                <h2>Angaben gem&auml;&szlig; &sect; 5 TMG:</h2>
 
-    Einwilligung (Artikel 6 Absatz 1 lit. a DSGVO): Sie haben uns Ihre Einwilligung gegeben, Daten zu einem bestimmten
-    Zweck zu verarbeiten. Ein Beispiel wäre die Speicherung Ihrer eingegebenen Daten eines Kontaktformulars.
-    Vertrag (Artikel 6 Absatz 1 lit. b DSGVO): Um einen Vertrag oder vorvertragliche Verpflichtungen mit Ihnen zu
-    erfüllen, verarbeiten wir Ihre Daten. Wenn wir zum Beispiel einen Kaufvertrag mit Ihnen abschließen, benötigen wir
-    vorab personenbezogene Informationen.
-    Rechtliche Verpflichtung (Artikel 6 Absatz 1 lit. c DSGVO): Wenn wir einer rechtlichen Verpflichtung unterliegen,
-    verarbeiten wir Ihre Daten. Zum Beispiel sind wir gesetzlich verpflichtet Rechnungen für die Buchhaltung aufzuheben.
-    Diese enthalten in der Regel personenbezogene Daten.
-    Berechtigte Interessen (Artikel 6 Absatz 1 lit. f DSGVO): Im Falle berechtigter Interessen, die Ihre Grundrechte
-    nicht einschränken, behalten wir uns die Verarbeitung personenbezogener Daten vor. Wir müssen zum Beispiel gewisse
-    Daten verarbeiten, um unsere Website sicher und wirtschaftlich effizient betreiben zu können. Diese Verarbeitung ist
-    somit ein berechtigtes Interesse.
-    Weitere Bedingungen wie die Wahrnehmung von Aufnahmen im öffentlichen Interesse und Ausübung öffentlicher Gewalt
-    sowie dem Schutz lebenswichtiger Interessen treten bei uns in der Regel nicht auf. Soweit eine solche
-    Rechtsgrundlage doch einschlägig sein sollte, wird diese an der entsprechenden Stelle ausgewiesen.
+                <p>
+                    Backend Boys Ltd. <br /> Ivica Katic & Mike Schwingenschlögl <br /> Grünbergerweg 16a <br /> Geb&auml;ude 1<br /> 8410 Wildon
+                </p>
 
-    Zusätzlich zu der EU-Verordnung gelten auch noch nationale Gesetze:
+                <h2>Kontakt:</h2>
 
-    In Österreich ist dies das Bundesgesetz zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten
-    (Datenschutzgesetz), kurz DSG.
-    In Deutschland gilt das Bundesdatenschutzgesetz, kurz BDSG.
-    Sofern weitere regionale oder nationale Gesetze zur Anwendung kommen, informieren wir Sie in den folgenden
-    Abschnitten darüber.
+                <p>
+                    Telefon: +43 (0) 44 55 66<br /> Fax: +43 (0) 123 44 55 99<br /> E-Mail: office@backendboys.at
+                </p>
 
-    Kontaktdaten des Verantwortlichen
-    Sollten Sie Fragen zum Datenschutz haben, finden Sie nachfolgend die Kontaktdaten der verantwortlichen Person bzw.
-    Stelle:
-    Michael Schwingenschlögl
+                <h2>Haftung f&uuml;r Inhalte</h2>
 
-    Speicherdauer
-    Dass wir personenbezogene Daten nur so lange speichern, wie es für die Bereitstellung unserer Dienstleistungen und
-    Produkte unbedingt notwendig ist, gilt als generelles Kriterium bei uns. Das bedeutet, dass wir personenbezogene
-    Daten löschen, sobald der Grund für die Datenverarbeitung nicht mehr vorhanden ist. In einigen Fällen sind wir
-    gesetzlich dazu verpflichtet, bestimmte Daten auch nach Wegfall des ursprüngliches Zwecks zu speichern, zum Beispiel
-    zu Zwecken der Buchführung.
+                <p>
+                    Als Diensteanbieter sind wir gem&auml;&szlig; &sect; 7 Abs.1 TMG f&uuml;r eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach &sect;&sect; 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, &uuml;bermittelte
+                    oder gespeicherte fremde Informationen zu &uuml;berwachen oder nach Umst&auml;nden zu forschen, die auf eine rechtswidrige T&auml;tigkeit hinweisen.
+                </p>
+                <p>
+                    Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unber&uuml;hrt. Eine diesbez&uuml;gliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung m&ouml;glich.
+                    Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                </p>
 
-    Sollten Sie die Löschung Ihrer Daten wünschen oder die Einwilligung zur Datenverarbeitung widerrufen, werden die
-    Daten so rasch wie möglich und soweit keine Pflicht zur Speicherung besteht, gelöscht.
+                <h2>Haftung f&uuml;r Links</h2>
 
-    Über die konkrete Dauer der jeweiligen Datenverarbeitung informieren wir Sie weiter unten, sofern wir weitere
-    Informationen dazu haben.
+                <p>
+                    Unser Angebot enth&auml;lt Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb k&ouml;nnen wir f&uuml;r diese fremden Inhalte auch keine Gew&auml;hr &uuml;bernehmen. F&uuml;r die Inhalte der verlinkten Seiten ist stets
+                    der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf m&ouml;gliche Rechtsverst&ouml;&szlig;e &uuml;berpr&uuml;ft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht
+                    erkennbar.
+                </p>
+                <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+                </p>
 
-    Rechte laut Datenschutz-Grundverordnung
-    Laut Artikel 13 DSGVO stehen Ihnen die folgenden Rechte zu, damit es zu einer fairen und transparenten Verarbeitung
-    von Daten kommt:
+                <h2>Urheberrecht</h2>
 
-    Sie haben laut Artikel 15 DSGVO ein Auskunftsrecht darüber, ob wir Daten von Ihnen verarbeiten. Sollte das
-    zutreffen, haben Sie Recht darauf eine Kopie der Daten zu erhalten und die folgenden Informationen zu erfahren:
-    zu welchem Zweck wir die Verarbeitung durchführen;
-    die Kategorien, also die Arten von Daten, die verarbeitet werden;
-    wer diese Daten erhält und wenn die Daten an Drittländer übermittelt werden, wie die Sicherheit garantiert werden
-    kann;
-    wie lange die Daten gespeichert werden;
-    das Bestehen des Rechts auf Berichtigung, Löschung oder Einschränkung der Verarbeitung und dem Widerspruchsrecht
-    gegen die Verarbeitung;
-    dass Sie sich bei einer Aufsichtsbehörde beschweren können (Links zu diesen Behörden finden Sie weiter unten);
-    die Herkunft der Daten, wenn wir sie nicht bei Ihnen erhoben haben;
-    ob Profiling durchgeführt wird, ob also Daten automatisch ausgewertet werden, um zu einem persönlichen Profil von
-    Ihnen zu gelangen.
-    Sie haben laut Artikel 16 DSGVO ein Recht auf Berichtigung der Daten, was bedeutet, dass wir Daten richtig stellen
-    müssen, falls Sie Fehler finden.
-    Sie haben laut Artikel 17 DSGVO das Recht auf Löschung („Recht auf Vergessenwerden“), was konkret bedeutet, dass Sie
-    die Löschung Ihrer Daten verlangen dürfen.
-    Sie haben laut Artikel 18 DSGVO das Recht auf Einschränkung der Verarbeitung, was bedeutet, dass wir die Daten nur
-    mehr speichern dürfen aber nicht weiter verwenden.
-    Sie haben laut Artikel 19 DSGVO das Recht auf Datenübertragbarkeit, was bedeutet, dass wir Ihnen auf Anfrage Ihre
-    Daten in einem gängigen Format zur Verfügung stellen.
-    Sie haben laut Artikel 21 DSGVO ein Widerspruchsrecht, welches nach Durchsetzung eine Änderung der Verarbeitung mit
-    sich bringt.
-    Wenn die Verarbeitung Ihrer Daten auf Artikel 6 Abs. 1 lit. e (öffentliches Interesse, Ausübung öffentlicher Gewalt)
-    oder Artikel 6 Abs. 1 lit. f (berechtigtes Interesse) basiert, können Sie gegen die Verarbeitung Widerspruch
-    einlegen. Wir prüfen danach so rasch wie möglich, ob wir diesem Widerspruch rechtlich nachkommen können.
-    Werden Daten verwendet, um Direktwerbung zu betreiben, können Sie jederzeit gegen diese Art der Datenverarbeitung
-    widersprechen. Wir dürfen Ihre Daten danach nicht mehr für Direktmarketing verwenden.
-    Werden Daten verwendet, um Profiling zu betreiben, können Sie jederzeit gegen diese Art der Datenverarbeitung
-    widersprechen. Wir dürfen Ihre Daten danach nicht mehr für Profiling verwenden.
-    Sie haben laut Artikel 22 DSGVO unter Umständen das Recht, nicht einer ausschließlich auf einer automatisierten
-    Verarbeitung (zum Beispiel Profiling) beruhenden Entscheidung unterworfen zu werden.
-    Kurz gesagt: Sie haben Rechte – zögern Sie nicht, die oben gelistete verantwortliche Stelle bei uns zu kontaktieren!
+                <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielf&auml;ltigung, Bearbeitung, Verbreitung und jede Art der Verwertung au&szlig;erhalb der Grenzen des Urheberrechtes bed&uuml;rfen
+                    der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur f&uuml;r den privaten, nicht kommerziellen Gebrauch gestattet.
+                </p>
+                <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden,
+                    bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                </p>
 
-    Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre
-    datenschutzrechtlichen Ansprüche in sonst einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde
-    beschweren. Diese ist für Österreich die Datenschutzbehörde, deren Website Sie unter https://www.dsb.gv.at/ finden.
-    In Deutschland gibt es für jedes Bundesland einen Datenschutzbeauftragten. Für nähere Informationen können Sie sich
-    an die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI) wenden. Für unser Unternehmen ist
-    die folgende lokale Datenschutzbehörde zuständig:
+                <p>&nbsp;</p>
 
-    Webhosting
-    Webhosting Zusammenfassung
-    👥 Betroffene: Besucher der Website
-    🤝 Zweck: professionelles Hosting der Website und Absicherung des Betriebs
-    📓 Verarbeitete Daten: IP-Adresse, Zeitpunkt des Websitebesuchs, verwendeter Browser und weitere Daten. Mehr Details
-    dazu finden Sie weiter unten bzw. beim jeweils eingesetzten Webhosting Provider.
-    📅 Speicherdauer: abhängig vom jeweiligen Provider, aber in der Regel 2 Wochen
-    ⚖️ Rechtsgrundlagen: Art. 6 Abs. 1 lit.f DSGVO (Berechtigte Interessen)
-    Was ist Webhosting?
-    Wenn Sie heutzutage Websites besuchen, werden gewisse Informationen – auch personenbezogene Daten – automatisch
-    erstellt und gespeichert, so auch auf dieser Website. Diese Daten sollten möglichst sparsam und nur mit Begründung
-    verarbeitet werden. Mit Website meinen wir übrigens die Gesamtheit aller Webseiten auf einer Domain, d.h. alles von
-    der Startseite (Homepage) bis hin zur aller letzten Unterseite (wie dieser hier). Mit Domain meinen wir zum Beispiel
-    beispiel.de oder musterbeispiel.com.
+                <h1>Datenschutzerkl&auml;rung</h1>
 
-    Wenn Sie eine Website auf einem Bildschirm ansehen möchten, verwenden Sie dafür ein Programm, das sich Webbrowser
-    nennt. Sie kennen vermutlich einige Webbrowser beim Namen: Google Chrome, Microsoft Edge, Mozilla Firefox und Apple
-    Safari.
+                <h2>Datenschutz</h2>
 
-    Dieser Webbrowser muss sich zu einem anderen Computer verbinden, wo der Code der Website gespeichert ist: dem
-    Webserver. Der Betrieb eines Webservers ist eine komplizierte und aufwendige Aufgabe, weswegen dies in der Regel von
-    professionellen Anbietern, den Providern, übernommen wird. Diese bieten Webhosting an und sorgen damit für eine
-    verlässliche und fehlerfreie Speicherung der Daten von Websites.
+                <p>
+                    Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen Daten sehr ernst. Wir behandeln Ihre
+                    personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser
+                    Datenschutzerkl&auml;rung.
+                </p>
+                <p>
+                    Die Nutzung unserer Website ist in der Regel ohne Angabe personenbezogener Daten m&ouml;glich. Soweit auf
+                    unseren Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder E-Mail-Adressen) erhoben werden,
+                    erfolgt dies, soweit m&ouml;glich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre
+                    ausdr&uuml;ckliche Zustimmung nicht an Dritte weitergegeben.
+                </p>
+                <p>
+                    Wir weisen darauf hin, dass die Daten&uuml;bertragung im Internet (z.B. bei der Kommunikation per E-Mail)
+                    Sicherheitsl&uuml;cken aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff durch Dritte
+                    ist nicht m&ouml;glich.
+                </p>
 
-    Bei der Verbindungsaufnahme des Browsers auf Ihrem Computer (Desktop, Laptop, Smartphone) und während der
-    Datenübertragung zu und vom Webserver kann es zu einer Verarbeitung personenbezogener Daten kommen. Einerseits
-    speichert Ihr Computer Daten, andererseits muss auch der Webserver Daten eine Zeit lang speichern, um einen
-    ordentlichen Betrieb zu gewährleisten.
+                <h2>Cookies</h2>
 
-    Zur Veranschaulichung:
+                <p>
+                    Die Internetseiten verwenden teilweise so genannte Cookies. Cookies richten auf Ihrem Rechner keinen
+                    Schaden an und enthalten keine Viren. Cookies dienen dazu, unser Angebot nutzerfreundlicher, effektiver
+                    und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die
+                    Ihr Browser speichert.
+                </p>
+                <p>
+                    Die meisten der von uns verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende
+                    Ihres Besuchs automatisch gel&ouml;scht. Andere Cookies bleiben auf Ihrem Endger&auml;t gespeichert, bis
+                    Sie diese l&ouml;schen. Diese Cookies erm&ouml;glichen es uns, Ihren Browser beim n&auml;chsten Besuch
+                    wiederzuerkennen.
+                </p>
+                <p>
+                    Sie k&ouml;nnen Ihren Browser so einstellen, dass Sie &uuml;ber das Setzen von Cookies informiert werden
+                    und Cookies nur im Einzelfall erlauben, die Annahme von Cookies f&uuml;r bestimmte F&auml;lle oder
+                    generell ausschlie&szlig;en sowie das automatische L&ouml;schen der Cookies beim Schlie&szlig;en des
+                    Browser aktivieren. Bei der Deaktivierung von Cookies kann die Funktionalit&auml;t dieser Website
+                    eingeschr&auml;nkt sein.
+                </p>
 
+                <h2>Server-Log-Files</h2>
 
-    Warum verarbeiten wir personenbezogene Daten?
-    Die Zwecke der Datenverarbeitung sind:
+                <p>
+                    Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log Files,
+                    die Ihr Browser automatisch an uns &uuml;bermittelt. Dies sind:
+                </p>
 
-    Professionelles Hosting der Website und Absicherung des Betriebs
-    zur Aufrechterhaltung der Betriebs- und IT-Sicherheit
-    Anonyme Auswertung des Zugriffsverhaltens zur Verbesserung unseres Angebots und ggf. zur Strafverfolgung bzw.
-    Verfolgung von Ansprüchen
-    Welche Daten werden verarbeitet?
-    Auch während Sie unsere Website jetzt gerade besuchen, speichert unser Webserver, das ist der Computer auf dem diese
-    Webseite gespeichert ist, in der Regel automatisch Daten wie
+                <ul>
+                    <li>Browsertyp und Browserversion</li>
+                    <li>verwendetes Betriebssystem</li>
+                    <li>Referrer URL</li>
+                    <li>Hostname des zugreifenden Rechners</li>
+                    <li>Uhrzeit der Serveranfrage</li>
+                </ul>
 
-    die komplette Internetadresse (URL) der aufgerufenen Webseite (z. B.
-    https://www.beispielwebsite.de/beispielunterseite.html?tid=121899691)
-    Browser und Browserversion (z. B. Chrome 87)
-    das verwendete Betriebssystem (z. B. Windows 10)
-    die Adresse (URL) der zuvor besuchten Seite (Referrer URL) (z. B.
-    https://www.beispielquellsite.de/vondabinichgekommen.html/)
-    den Hostnamen und die IP-Adresse des Geräts von welchem aus zugegriffen wird (z. B. COMPUTERNAME und 194.23.43.121)
-    Datum und Uhrzeit
-    in Dateien, den sogenannten Webserver-Logfiles
-    Wie lange werden Daten gespeichert?
-    In der Regel werden die oben genannten Daten zwei Wochen gespeichert und danach automatisch gelöscht. Wir geben
-    diese Daten nicht weiter, können jedoch nicht ausschließen, dass diese Daten beim Vorliegen von rechtswidrigem
-    Verhalten von Behörden eingesehen werden.
+                <p>
+                    Diese Daten sind nicht bestimmten Personen zuordenbar. Eine Zusammenf&uuml;hrung dieser Daten mit
+                    anderen Datenquellen wird nicht vorgenommen. Wir behalten uns vor, diese Daten nachtr&auml;glich zu ändern.
+                </p>
 
-    Kurz gesagt: Ihr Besuch wird durch unseren Provider (Firma, die unsere Website auf speziellen Computern (Servern)
-    laufen lässt), protokolliert, aber wir geben Ihre Daten nicht ohne Zustimmung weiter!
+                <p>Quelle: <a href="https://www.erecht24.de/impressum-generator.html">https://www.e-recht24.de/impressum-generator.html</a></p>
 
-    Rechtsgrundlage
-    Die Rechtmäßigkeit der Verarbeitung personenbezogener Daten im Rahmen des Webhosting ergibt sich aus Art. 6 Abs. 1
-    lit. f DSGVO (Wahrung der berechtigten Interessen), denn die Nutzung von professionellem Hosting bei einem Provider
-    ist notwendig, um das Unternehmen im Internet sicher und nutzerfreundlich präsentieren und Angriffe und Forderungen
-    hieraus gegebenenfalls verfolgen zu können.
+            </div>
+        </div>
+    </div>
 
-    Zwischen uns und dem Hostingprovider besteht in der Regel ein Vertrag über die Auftragsverarbeitung gemäß Art. 28 f.
-    DSGVO, der die Einhaltung von Datenschutz gewährleistet und Datensicherheit garantiert.
-
-    Alle Texte sind urheberrechtlich geschützt.
-
-    Quelle: Erstellt mit dem Datenschutz Generator von AdSimple
+</section>
 </main>
 <?php
 include('./inc/footer.inc.php');
 ?>
-</body>
-</html>

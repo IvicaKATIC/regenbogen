@@ -1,5 +1,5 @@
 <?php
-require_once 'inc/maininclude.inc.php';
+include ('inc/maininclude.inc.php');
 
 // "btregister" senden, somit auch den Formular
 if (isset($_POST['btlogin'])) {
@@ -17,8 +17,8 @@ if (isset($_POST['btlogin'])) {
         $paedagoge = $paedagogeManager->login($_POST['email'], $_POST['password']);
         // war Login erfolgreich?
         if ($paedagoge !== false) {
-            // Redirect zum Index
-            header("Location: ./?loggedin=true");
+            // Redirect zum Main
+            header("Location: ./main.php");
         } else {
             $errors['login'] = 'Login fehlgeschlagen.';
         }
@@ -26,19 +26,6 @@ if (isset($_POST['btlogin'])) {
 }
 
 ?>
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>Kompetenz Regenbogen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="js/jquery-3.6.0.js" defer></script>
-    <script src="js/script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css"/>
-</head>
-<body>
-<!-- HEADER mit Menü -->
-<?php include 'inc/header.inc.php'; ?>
 
 <!-- Inhalt der Seite -->
 <main class="center-wrapper">
@@ -59,6 +46,6 @@ if (isset($_POST['btlogin'])) {
     </form>
 </main>
 <?php include 'inc/footer.inc.php'; ?>
-</body>
+
 
 

@@ -3,7 +3,9 @@ require_once __DIR__ . '/../model/paedagoge.inc.php';
 class PaedagogeManager {
     // PDO $connection ist die Verbindung zur Datenbank
     private PDO $connection;
-    function __construct(PDO $connection){
+
+    function __construct(PDO $connection)
+    {
         $this->connection = $connection;
     }
 
@@ -36,9 +38,9 @@ class PaedagogeManager {
         return $this->connection->lastInsertId();
     }
 
-    // wenn erfolgreich, Paedagogen-Objekt zurück, sonst false
+    // wenn erfolgreich Paedagoge-Objekt zurück, sonst false
     function login(string $email, string $password) : Paedagoge|bool{
-        // User anhand der E-Mail Adresse laden
+        // den Pädagogen anhand der E-Mail Adresse laden
         $paedagoge = $this->getPaedagogeByEmail($email);
         if($paedagoge == false){
             return false;
