@@ -33,6 +33,8 @@ $kompetenzerhebungManager = new KompetenzerhebungManager($connection);
 
 //errormessages Array
 $errors =[];
+//successmessages Array
+$successes =[];
 
 
 

@@ -34,10 +34,10 @@ if (isset($_POST['btregister'])) {
     //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
     if (count($errors) == 0) {
         if ($paedagogeManager->getPaedagogeByEmail($email) != false) {
-            $errors[] = 'Pädagoge bereits registriert!';
+                $errors[] = 'Pädagoge bereits registriert!';
         } else {
             $id = $paedagogeManager->registerPaedagoge($email, $passwort, $isadmin, $vorname, $nachname);
-            header('Location: ./main.php');
+            header('Location: ./registrierung.php?success=paedagogeregistriert');
             return;
         }
     }
@@ -51,6 +51,7 @@ if ($showFormular) {
 
     <section id="kontakt-bereich">
         <?php include 'inc/errormessages.inc.php'; ?>
+        <?php include 'inc/successmessages.inc.php'; ?>
         <div class="container">
 
             <div class="row">

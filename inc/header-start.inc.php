@@ -44,7 +44,8 @@ if (isset($_POST['btlogin'])) {
     <meta name="msapplication-TileColor" content="#f0f0f0">
     <meta name="msapplication-config" content="../images/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/script.js"></script>
     <!-- GOOGLE-FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
 

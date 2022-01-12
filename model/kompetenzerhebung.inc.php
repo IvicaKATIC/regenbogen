@@ -3,10 +3,10 @@
 class Kompetenzerhebung
 {
     public int $id;
-    public date $datum;
+    public DateTime $datum;
     public int $fk_kind_id;
 
-    public function __construct(int $id, date $datum, int $fk_kind_id)
+    public function __construct(int $id, DateTime $datum, int $fk_kind_id)
     {
         $this->id = $id;
         $this->datum = $datum;

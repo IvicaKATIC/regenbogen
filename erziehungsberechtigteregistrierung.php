@@ -22,7 +22,7 @@ if (isset($_POST['btregister'])) {
             $errors[] = 'Erziehungsberechtigte bereits registriert!';
         } else {
             $id = $erziehungsberechtigteManager->registerErziehungsberechtigte($email,$vorname, $nachname);
-            header('Location: ./main.php');
+            header('Location: ./erziehungsberechtigteregistrierung.php?success=erziehungsberechtigteregistriert');
             return;
         }
     }
@@ -33,8 +33,7 @@ if (isset($_POST['btregister'])) {
             $errors[] = 'Der Erziehungsberechtigte wurde bereits registriert!';
         } else {
             $id = $erziehungsberechtigteManager->registerErziehungsberechtigte($vorname, $nachname);
-            header('Location: ./index.php');
-            echo "<h1>Der Erziehungsberechtigte wurde erfolgreich angelegt!!</h1>";
+            header('Location: ./erziehungsberechtigteregistrierung.php?success=erziehungsberechtigteregistriert');
             return;
         }
     }
@@ -47,6 +46,8 @@ if ($showFormular) {
 
 <section id="kontakt-bereich">
     <?php include 'inc/errormessages.inc.php'; ?>
+    <?php include 'inc/successmessages.inc.php'; ?>
+
     <div class="container">
 
         <div class="row">
