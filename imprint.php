@@ -126,7 +126,7 @@ require_once 'inc/maininclude.inc.php';
     </div>
 
 </section>
-</main>
+
 <?php
 include('./inc/footer.inc.php');
 ?>
