@@ -1,19 +1,18 @@
 // jQuery Ready Function
-$(function(){
-    // Code hier ausführen sobald DOM bereit ist
-$(document).on('change','[name=percentage]',function(e){
-    let frage_id=$(this).data('frage-id');
-    let kompetenzerhebungs_id=$(this).data('kompetenzerhebung-id');
-    let percentage=$(this).val();
-    $.post(
-        'kompetenzerhebungspeichern.php',
-        {frage_id:frage_id,kompetenzerhebungs_id:kompetenzerhebungs_id,percentage:percentage})
-        .done(function(){
-            alert("Done!");
-        })
-        .fail(function(){
-            alert("Fail");
-        })
-    ;
-});
+$(function () {
+    $(document).on('change', '[name=percentage]', function (e) {
+        let question_id = $(this).data('question-id');
+        let survey_id = $(this).data('survey-id');
+        let percentage = $(this).val();
+        $.post(
+            'saveSurvey.php',
+            {question_id: question_id, survey_id: survey_id, percentage: percentage})
+            .done(function () {
+                /*alert("Done!");*/
+            })
+            .fail(function () {
+                alert("Fail");
+            })
+        ;
+    });
 });

@@ -5,14 +5,14 @@ require_once 'inc/maininclude.inc.php';
 <!-- HEADER mit Menü -->
 <!-- LOGO -->
 <div id="animiertes-logo">
-    <img src="./images/rainbow2.png" alt="Logo Ivo und Mike">
+    <img src="./images/rainbow2.png" alt="Regenbogen Logo">
 </div>
 
 <!-- Inhalt der Seite -->
 <main class="center-wrapper">
     <!-- LEISTUNGEN-BEREICH -->
 
-    <section id="leistungen-bereich">
+    <section id="info-bereich">
 
         <div class="container">
             <div class="row">
@@ -25,33 +25,33 @@ require_once 'inc/maininclude.inc.php';
             </div>
             <div class="row">
                 <div class="col-3">
-                    <article class="leistungs-teaser-box">
+                    <article class="info-teaser-box">
                         <h2>Der subjektive Blick</h2>
-                        <p>verhindert häufig den „sauberen Blick“ aufs Kind. Wir interpretieren in unsere Beobach­tungen Wünsche, Vorstellungen über das Kind, die Situation und warum es etwas tut, hinein. Wir ziehen Rückschlüsse und gehen davon aus, dass diese so auch korrekt sind. Eine große Rolle dabei spielt die persönli­che Beziehung zum Kind. </p>
-                        <a class="btn-typ-2 leistung-ansehen-btn" href="https://schlaaf-kirschner.de/">Weiter</a>
+                        <p>verhindert häufig den „sauberen Blick“ aufs Kind. Wir interpretieren in unsere Beobachtungen Wünsche, Vorstellungen über das Kind, die Situation und warum es etwas tut, hinein. Wir ziehen Rückschlüsse und gehen davon aus, dass diese so auch korrekt sind. Eine große Rolle dabei spielt die persönliche Beziehung zum Kind. </p>
+                        <a class="btn-typ-2 info-ansehen-btn" href="https://schlaaf-kirschner.de/">Weiter</a>
                     </article>
                 </div>
                 <div class="col-3">
-                    <article class="leistungs-teaser-box">
+                    <article class="info-teaser-box">
                         <h2>Objektivere Beobachtungen</h2>
                         <p>Objektivere Beobachtungen bedeuten, dass Sie nicht alleine ein Kind beobachten, sondern mit Eltern und Kollegen in den Austausch gehen. Und das gemeinsame Ergebnis zu Papier bringen. Es ist der Blick, der genau das beschreibt, was Sie sehen, ohne Interpretationen und Spekulationen. Wir helfen Ihnen und Ihrem Team gerne dabei.</p>
-                        <a class="btn-typ-2 leistung-ansehen-btn" href="https://schlaaf-kirschner.de/ips-methode/">Weiter</a>
+                        <a class="btn-typ-2 info-ansehen-btn" href="https://schlaaf-kirschner.de/ips-methode/">Weiter</a>
                     </article>
                 </div>
             </div>
             <div class="row">
                 <div class="col-3">
-                    <article class="leistungs-teaser-box">
+                    <article class="info-teaser-box">
                         <h2>Unsere Beziehung</h2>
                         <p>Unsere Beziehung beeinflusst die Beobachtung, denn Sie beschreiben wohlwollender, wenn Sie ein Kind mögen, und sind verzeihend, wenn es etwas nicht so gut kann. Sie sind kritisch, wenn die Beziehung zum Kind gestört ist, es Sie im Alltag herausfordert und Sie vielleicht an Ihre Grenzen führt. Keine Sorge - das ist normal!</p>
-                        <a class="btn-typ-2 leistung-ansehen-btn" href="https://schlaaf-kirschner.de/beobachtungsboegen/">Weiter</a>
+                        <a class="btn-typ-2 info-ansehen-btn" href="https://schlaaf-kirschner.de/beobachtungsboegen/">Weiter</a>
                     </article>
                 </div>
                 <div class="col-3">
-                    <article class="leistungs-teaser-box">
+                    <article class="info-teaser-box">
                         <h2>Die Herausforderung</h2>
                         <p>Die Herausforderung liegt darin, jedes einzelne Kind im Auge zu behalten und es innerhalb der Gruppe, des Alltags zu sehen. Sie müssen erkennen, woran das Kind Freude hat, womit es sich häufig beschäftigt, wo seine Stärken liegen, aber auch, wo es Unterstützungsbedarf zeigt. Unsere Software hilft Ihnen bei dieser Analyse.</p>
-                        <a class="btn-typ-2 leistung-ansehen-btn" href="https://schlaaf-kirschner.de/weiterbildung/">Weiter</a>
+                        <a class="btn-typ-2 info-ansehen-btn" href="https://schlaaf-kirschner.de/weiterbildung/">Weiter</a>
                     </article>
                 </div>
             </div>
@@ -125,7 +125,7 @@ require_once 'inc/maininclude.inc.php';
                             Damit Sie bei Ihren Beobachtungen gerade im Bereich der emotionalen Entwicklung nichts übersehen und die alles im Blick haben, sollten Sie gezielt vorgehen. Der folgende Beobachtungsbogen
                             unterstützt Sie dabei, alle Entwicklungen des Kindes wahrzunehmen.
                         </p>
-                        <img src="./images/kids1.png" alt="Abstarkter Regenbogen vertikal">
+                        <img src="./images/kids1.png" alt="Abstrakter Regenbogen vertikal">
                     </article>
                 </div>
             </div>

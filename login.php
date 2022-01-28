@@ -14,11 +14,11 @@ if (isset($_POST['btlogin'])) {
     // Wenn es keine Fehler gibt → Registrierung durchführen
     if (count($errors) == 0) {
         // Login durchführen
-        $paedagoge = $paedagogeManager->login($_POST['email'], $_POST['password']);
+        $paedagoge = $educatorManager->login($_POST['email'], $_POST['password']);
         // war Login erfolgreich?
         if ($paedagoge !== false) {
             // Redirect zum Main
-            header("Location: ./main.php");
+            header("Location: ./index.php");
         } else {
             $errors['login'] = 'Login fehlgeschlagen.';
         }
@@ -29,21 +29,17 @@ if (isset($_POST['btlogin'])) {
 
 <!-- Inhalt der Seite -->
 <main class="center-wrapper">
-    <h1>Login</h1>
-    <form action="./login.php" method="POST">
-        <?php include 'inc/errormessages.inc.php'; ?>
-        <div>
-            <label for="email">Email:</label><br>
-            <input type="email" name="email" id="email">
-        </div>
-        <div>
-            <label for="password">Passwort:</label><br>
-            <input type="password" name="password" id="password">
-        </div>
-        <div>
-            <button name="btlogin">Login</button>
-        </div>
-    </form>
+    <section id="über-uns-bereich">
+    <h1><?php include 'inc/errormessages.inc.php'; ?></h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </section>
 </main>
 <?php include 'inc/footer.inc.php'; ?>
 

@@ -5,36 +5,32 @@ session_start();
 // DB Connection inkludieren
 require_once __DIR__ . '/../db/connection.inc.php';
 // PaedagogeManager inkludieren
-require_once __DIR__ . '/../manager/paedagogemanager.inc.php';
-
+require_once __DIR__ . '/../manager/educatorManager.inc.php';
 // KindManager inkludieren
-require_once __DIR__ . '/../manager/kindmanager.inc.php';
+require_once __DIR__ . '/../manager/childManager.inc.php';
 // ErziehungsberechtigteManager inkludieren
-require_once __DIR__ . '/../manager/erziehungsberechtigtemanager.inc.php';
+require_once __DIR__ . '/../manager/guardianManager.inc.php';
+// KompetenzerhebungsManager inkludieren
+require_once __DIR__ . '/../manager/surveyManager.inc.php';
 
-require_once __DIR__ . '/../manager/kompetenzerhebungmanager.inc.php';
 
-// Die Objekte wurden auch in die Datei objekt.inc.php inkludiert/kopiert!!!
 // Objekt der Klasse PaedagogeManager erzeugen
-$paedagogeManager = new PaedagogeManager($connection);
-
-$loggedin = $paedagogeManager->isLoggedIn();
-
-require_once ('header.inc.php');
+$educatorManager = new EducatorManager($connection);
+//Aufruf der Methode, die den Login-Status feststellt
+$loggedin = $educatorManager->isLoggedIn();
+//Jetzt kann der Header inkludiert werden -> Unterscheidung Header of eingeloggt oder nicht
+require_once('header.inc.php');
 
 // Objekt der Klasse KindManager erzeugen
-$kindManager = new KindManager($connection);
+$childManager = new ChildManager($connection);
 
 // Objekt der Klasse ErziehungsberechtigteManager erzeugen
-$erziehungsberechtigteManager = new ErziehungsberechtigteManager($connection);
+$guardianManager = new GuardianManager($connection);
 
-
-$kompetenzerhebungManager = new KompetenzerhebungManager($connection);
+// Objekt der Klasse KompetenzerhebungsManager erzeugen
+$surveyManager = new SurveyManager($connection);
 
 //errormessages Array
-$errors =[];
+$errors = [];
 //successmessages Array
-$successes =[];
-
-
-
+$successes = [];

@@ -1,7 +1,6 @@
 <?php
-require_once ('inc/maininclude.inc.php');
+require_once('inc/maininclude.inc.php');
 
-// "btregister" senden, somit auch den Formular
 if (isset($_POST['btlogin'])) {
     // Eingabefelder überprüfen
     if (strlen(trim($_POST['email'])) == 0) {
@@ -10,19 +9,6 @@ if (isset($_POST['btlogin'])) {
     if (strlen(trim($_POST['password'])) == 0) {
         $errors['password'] = 'Passwort eingeben.';
     }
-
-    // Wenn es keine Fehler gibt → Registrierung durchführen
-   /* if (count($errors) == 0) {
-        // Login durchführen
-        $paedagoge = $paedagogeManager->login($_POST['email'], $_POST['password']);
-        // war Login erfolgreich?
-        if ($paedagoge !== false) {
-            // Redirect zum Main
-            header("Location: ./main.php");
-        } else {
-            $errors['login'] = 'Login fehlgeschlagen.';
-        }
-    }*/
 }
 
 ?>
@@ -60,65 +46,75 @@ if (isset($_POST['btlogin'])) {
 
 <nav id="header-nav">
 
-
     <!-- DESKTOP-NAVIGATION -->
 
     <div class="container" id="desktop-nav">
         <div class="row">
             <div class="col-6">
-
                 <a href="index.php" class="logo-link">
-                    <img src="images/rainbow2.png" alt="Logo von Mike und Ivo">
+                    <img src="images/rainbow2.png" alt="Das Logo, ein Regenbogen">
                 </a>
 
                 <ul>
                     <li><a href="./index.php">Home</a></li>
-                    <li><a href="./registrierung.php">Registrieren</a></li>
-
+                    <li><a href="./registration.php">Registrieren</a></li>
                 </ul>
+            </div>
+        </div>
+    </div>
 
+    <!-- MOBILE-NAVIGATION -->
+
+    <div class="container" id="mobile-nav">
+        <div class="row">
+            <div class="col-6">
+                <a href="index.php" class="logo-link">
+                    <img src="images/rainbow2.png" alt="Das Logo, ein Regenbogen">
+                </a>
+                <div class="clearfix" id="mobile-nav-dropdown">
+
+                    <div id="mobile-nav-button"><span>&equiv;</span></div>
+
+                    <div class="clearfix" id="mobile-nav-content">
+                        <ul>
+                            <li><a href="./index.php">Home</a></li>
+                            <li><a href="./registration.php">Registrieren</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </nav>
 
-
-
 <!-- HEADER-BANNER -->
 
 <header id="header-banner"></header>
 
-<!-- NEWSLETTER-BEREICH -->
+<!-- LOGIN-BEREICH -->
 
-<section id="newsletter-bereich">
+<section id="login-bereich">
 
     <div class="container">
         <div class="row">
             <div class="col-4">
                 <br>
                 <br>
-                <p id="nb-werbetext"><span class="wichtiger-text">DER KOMPETENZ-REGENBOGEN: </span> Elementarpädagogik objektiv & transparent.</p>
-
+                <p id="nb-infotext"><span class="wichtiger-text">DER KOMPETENZ-REGENBOGEN: </span>Elementarpädagogik objektiv & transparent.</p>
             </div>
-            <div class="col-2 clearfix">
+            <bR>
 
+            <div class="col-2 clearfix">
                 <form id="nb-form" action="./login.php" method="post">
                     <?php include 'inc/errormessages.inc.php'; ?>
                     <label class="screenreader" for="nb-email-input">E-Mail:</label>
                     <input id="nb-email-input" type="email" name="email" placeholder="Ihre E-Mail Adresse" title="Bitte eine gültige E-Mail Adresse eingeben.">
-
                     <label class="screenreader" for="nb-email-input">Passwort:</label>
-                    <input id="nb-passwort-input" type="password" name="password" placeholder="Ihr Passwort">
+                    <input id="nb-email-input" type="password" name="password" placeholder="Ihr Passwort">
 
-                    <button class="btn-typ-1" id="nb-btn" type="submit" name="btlogin">Jetzt anmelden!</button>
-
+                    <button class="btn-typ-1" id="nb-btn" type="submit" name="btlogin">Jetzt einloggen!</button>
                 </form>
-
             </div>
         </div>
     </div>
-
 </section>
-
-
-<!--<li><a href="./login.php">Login</a></li>-->

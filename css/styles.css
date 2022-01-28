@@ -7,12 +7,16 @@ Hell Grau:    #F0F0F0
 Rot:          #A62C21
 */
 
+
 /* === GLOBAL === */
+
+html {
+  font-size: 16px;
+}
 
 body {
   margin: 0;
   font-family: 'Raleway', 'Lato', 'Helvetica Neue', 'Arial', sans-serif;
-  font-size: 16px;
 }
 
 * {
@@ -23,6 +27,22 @@ body {
 section {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.success {
+  font-weight: bold;
+  color: white;
+  border: 2px black;
+  background-color: green;
+  padding: 16px;
+}
+
+.error {
+  font-weight: bold;
+  color: white;
+  border: 2px black;
+  background-color: red;
+  padding: 16px;
 }
 
 @media (max-width: 1366px) {
@@ -68,22 +88,6 @@ section {
 
 .active {
   background-color: #A62C21 !important;
-}
-
-.success {
-  font-weight: bold;
-  color: white;
-  border: 2px black;
-  background-color: green;
-  padding: 16px;
-}
-
-.error {
-  font-weight: bold;
-  color: white;
-  border: 2px black;
-  background-color: red;
-  padding: 16px;
 }
 
 .wichtiger-text {
@@ -154,10 +158,6 @@ section {
   transition: border .5s ease-in-out;
 }
 
-.button-hidden{
-  visibility: collapse;
-}
-
 .btn-typ-1:hover {
   border: 2px solid #FFF;
   font-weight: normal;
@@ -204,9 +204,9 @@ section {
 }
 
 #header-nav a > img {
-  height: 50px;
+  height: 30px;
   width: auto;
-  margin: 0.01rem;
+  margin: .55rem;
   float: left;
 }
 
@@ -344,21 +344,16 @@ section {
 
 /* === NEWSLETTER-BEREICH === */
 
-#newsletter-bereich {
+#login-bereich {
   width: 100%;
   background-color: #3D3F45;
   padding-bottom: 0;
   padding-top: 0;
 }
 
-#nb-werbetext {
+#nb-infotext {
   color: #FFF;
   font-size: 1.2rem;
-}
-
-#nb-werbetext-loggedin {
-  color: #FFF;
-  font-size: 1.6rem;
 }
 
 #nb-form {
@@ -375,13 +370,6 @@ section {
   padding: .4rem;
 }
 
-#nb-passwort-input {
-  width: 78%;
-  height: 35px;
-  border: 2px solid #FFF;
-  padding: .4rem;
-}
-
 #nb-btn {
   height: 35px;
 }
@@ -389,9 +377,6 @@ section {
 @media (max-width: 1822px) {
 
   #nb-email-input {
-    width: 70%;
-  }
-  #nb-passwort-input {
     width: 70%;
   }
 
@@ -403,10 +388,7 @@ section {
     width: 100%;
     margin-bottom: .5rem;
   }
-  #nb-passwort-input {
-    width: 100%;
-    margin-bottom: .5rem;
-  }
+
   #nb-btn {
     width: 100%;
   }
@@ -415,7 +397,7 @@ section {
 
 @media (max-width: 768px) {
 
-  #nb-werbetext {
+  #nb-infotext {
     display: none;
   }
 
@@ -423,7 +405,7 @@ section {
     margin-top: 0;
   }
 
-  #newsletter-bereich .col-4 {
+  #login-bereich .col-4 {
     display: none;
   }
 
@@ -432,10 +414,6 @@ section {
 @media (max-width: 480px) {
 
   #nb-email-input {
-    height: 25px;
-  }
-
-  #nb-passwort-input {
     height: 25px;
   }
 
@@ -473,23 +451,23 @@ section {
   88.888%   { -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }
   100%      { -webkit-transform: rotateZ(360deg); transform: rotateZ(360deg); }
 }
+.logoAnimation{transform-origin: center;}
 
 #animiertes-logo {
   height: 150px;
   width: 150px;
   background-color: darkcyan;
-          /*#A62C21*/
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
-  padding: 5px;
+  padding: 25px;
 }
 
 #animiertes-logo > img {
   display: block;
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
   margin-left: auto;
   margin-right: auto;
   -webkit-animation: logoAnimation 5s ease-in-out infinite alternate;
@@ -506,11 +484,11 @@ section {
 
 /* === LEISTUNGEN-BEREICH === */
 
-#leistungen-bereich {
+#info-bereich {
   padding-top: 1rem;
 }
 
-.leistungs-teaser-box {
+.info-teaser-box {
   background-color: #3D3F45;
   text-align: center;
   color: #FFF;
@@ -519,40 +497,21 @@ section {
   margin-bottom: 1.6rem;
 }
 
-.leistungs-teaser-box-2 {
-  background-color: darkcyan;
-  text-align: center;
-  color: #FFF;
-  padding: 1rem 3rem 2.5rem;
-  width: 60%;
-  margin-bottom: 1.6rem;
-}
-
-#leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-teaser-box {
+#info-bereich .row > .col-3:nth-of-type(even) > .info-teaser-box {
   margin-right: auto;
   margin-left: 1rem;
 }
 
-#leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-teaser-box {
+#info-bereich .row > .col-3:nth-of-type(odd) > .info-teaser-box {
   margin-right: 1rem;
   margin-left: auto;
 }
 
-#leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-teaser-box-2 {
-  margin-right: auto;
-  margin-left: 1rem;
-}
-
-#leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-teaser-box-2 {
-  margin-right: 1rem;
-  margin-left: auto;
-}
-
-.leistungs-teaser-box > h2 {
+.info-teaser-box > h2 {
   font-size: 1.4rem;
 }
 
-.leistung-ansehen-btn {
+.info-ansehen-btn {
   text-decoration: none;
   height: 40px;
   display: inline-block;
@@ -562,26 +521,26 @@ section {
   margin-top: 1rem;
 }
 
-.leistung-ansehen-btn:link {
+.info-ansehen-btn:link {
   color: white;
 }
 
-.leistung-ansehen-btn:visited {
+.info-ansehen-btn:visited {
   color: white;
 }
 
-.leistung-ansehen-btn:active {
+.info-ansehen-btn:active {
   color: white;
 }
 
-.leistung-ansehen-btn:hover {
+.info-ansehen-btn:hover {
   color: #A62C21;
   border: 2px solid #A62C21;
 }
 
 @media (max-width: 1366px) {
 
-  .leistungs-teaser-box {
+  .info-teaser-box {
     width: 80%;
   }
 
@@ -589,16 +548,16 @@ section {
 
 @media (max-width: 1024px) {
 
-  .leistungs-teaser-box {
+  .info-teaser-box {
     width: 100%;
     margin-bottom: .6rem;
   }
 
-  #leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-teaser-box {
+  #info-bereich .row > .col-3:nth-of-type(even) > .info-teaser-box {
     margin-left: .5rem;
   }
 
-  #leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-teaser-box {
+  #info-bereich .row > .col-3:nth-of-type(odd) > .info-teaser-box {
     margin-right: .5rem;
   }
 
@@ -606,11 +565,11 @@ section {
 
 @media (max-width: 768px) {
 
-  #leistungen-bereich .row > .col-3:nth-of-type(even) > .leistungs-teaser-box {
+  #info-bereich .row > .col-3:nth-of-type(even) > .info-teaser-box {
     margin-left: 0;
   }
 
-  #leistungen-bereich .row > .col-3:nth-of-type(odd) > .leistungs-teaser-box {
+  #info-bereich .row > .col-3:nth-of-type(odd) > .info-teaser-box {
     margin-right: 0;
   }
 
@@ -618,7 +577,7 @@ section {
 
 @media (max-width: 480px) {
 
-  .leistungs-teaser-box {
+  .info-teaser-box {
     padding: 1rem 1.5rem 2.5rem;
   }
 
@@ -714,17 +673,6 @@ section {
           transform: rotateZ(360deg);
 }
 
-#guenstig-icon {
-  background: #3D3F45 url("./../images/services-sprite.png") left 0 top 0;
-}
-
-#schnell-icon {
-  background: #3D3F45 url("./../images/services-sprite.png") left -120px top 0;
-}
-
-#modern-icon {
-  background: #3D3F45 url("./../images/services-sprite.png") left -240px top 0;
-}
 
 @media (max-width: 768px) {
 
@@ -885,7 +833,7 @@ section {
   color: #FFF;
   padding: 2rem 4rem;
   text-align: center;
-  min-height: 60px;
+  min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1077,8 +1025,6 @@ section {
   margin-bottom: 4rem;
 }
 
-
-
 @media (max-width: 1366px) {
 
   #kontakt-formular {
@@ -1140,21 +1086,6 @@ section {
 .col-3 { width: 50%;     }
 .col-4 { width: 66.666%; }
 .col-6 { width: 100%;    }
-.buttonStyle{
-  /*width: 50%;
-  display: inline-block;
-  align: center;
-  border: 1px solid black;
-  border-radius: 5px;
-  z-index:5;
-  margin: 5px;*/
-
-  border-bottom: 1px solid grey;
-  margin-bottom: 8px;
-
-}
-
-
 
 @media (max-width: 1024px) {
 
@@ -1178,20 +1109,4 @@ section {
   .col-3 { width: 100%; }
   .col-4 { width: 100%; }
 
-}
-
-.success {
-  font-weight: bold;
-  color: white;
-  border: 2px black;
-  background-color: green;
-  padding: 16px;
-}
-
-.error {
-  font-weight: bold;
-  color: white;
-  border: 2px black;
-  background-color: red;
-  padding: 16px;
 }
