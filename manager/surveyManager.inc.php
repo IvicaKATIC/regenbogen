@@ -152,7 +152,7 @@ class SurveyManager
             SELECT *
             FROM t_prozentsatz
             WHERE FK_Kompetenzerhebung_ID = :survey_id 
-            AND FK_Fragen_ID = :quetsion_id');
+            AND FK_Fragen_ID = :question_id');
         $ps->bindValue('survey_id', $survey_id);
         $ps->bindValue('question_id', $question_id);
         $ps->execute();
