@@ -2,13 +2,13 @@
 // gibt es Meldungen über den Erfolg?
 $successes = [];
 if (isset($_GET['success'])) {
-    if ($_GET['success'] == 'erziehungsberechtigteregistriert') {
+    if ($_GET['success'] == 'guardianregistered') {
         $successes[] = 'Erziehungsberechtigte erfolgreich registriert!';
     }
-    if ($_GET['success'] == 'paedagogeregistriert') {
+    if ($_GET['success'] == 'educatorregistered') {
         $successes[] = 'Pädagoge erfolgreich registriert!';
     }
-    if ($_GET['success'] == 'kindregistriert') {
+    if ($_GET['success'] == 'childregistered') {
         $successes[] = 'Kind erfolgreich registriert!';
     }
 }
